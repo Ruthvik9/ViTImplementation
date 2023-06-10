@@ -9,9 +9,13 @@ The Vision Transformer (ViT) model is a transformer-based model that views an im
 The key features of the Vision Transformer include:
 
 Patch-based tokenization: The image is divided into small patches (e.g., 16x16 pixels), which are linearly transformed (flattened) to create a sequence of image tokens.
+
 Class token: An additional token is added at the beginning of the sequence, which collects global information about the image through multiple layers of transformer encodings. This class token is used in the final classification layer to predict the image class.
+
 Positional embeddings: Since the transformer model doesn't natively handle the order of the input sequence, positional embeddings are added to the image tokens to provide information about the relative or absolute position of the patches in the image.
+
 Transformer encoder: The core of the ViT model is a sequence of transformer encoders. Each transformer encoder consists of a multi-head self-attention mechanism and a multi-layer perceptron (MLP), with residual connections and layer normalization applied at each stage.
+
 The implementation in this repository includes a custom PyTorch module for the Vision Transformer, with specific classes for the transformer encoder and the overall model architecture.
 
 ## Code Structure
